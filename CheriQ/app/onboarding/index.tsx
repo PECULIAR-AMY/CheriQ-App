@@ -1,25 +1,35 @@
 import React, { FC } from "react";
 import { View, StyleSheet, Image, TouchableOpacity, Text } from "react-native"; // ✅ Added Text
 import { useRouter } from "expo-router";
-import cheriqImage from "../assets/images/Cheri_Q_Logo-04-removebg-preview 1.png"; 
-import cheriqImage1 from "../assets/images/Cheri Q Logo-06 1.png";
+import Eclip from '@/assets/images/Group 9.png'; 
+import Undraw from "@/assets/images/undraw_deliveries_2r4y 1.jpg";
+import Group from "@/assets/images/Group 8 (1).png"
 
-const Splash: FC = () => {
+const onboarding: FC = () => {
   const router = useRouter(); // ✅ Initialize router
 
   return (
     <View style={styles.container}>
-      <Image source={cheriqImage} style={styles.image} />
-      <Image source={cheriqImage1} style={styles.image1} />
+      <Image source={Eclip} style={styles.image} />
+      <Image source={Undraw} style={styles.image1} />
+
+      <Text>Free Delivery</Text>
+
+      <Text>We offer Free delivery to any of this Locations</Text>
+
+      <Text>we offer free delivery within Lagos </Text>
+      
 
       <TouchableOpacity style={styles.button} onPress={() => router.push("/onboarding")}>
         <Text style={styles.buttonText}>Click</Text>
       </TouchableOpacity>
+
+      <Image  source={Group} style= {styles.image2}/>
     </View>
   );
 };
 
-export default Splash;
+export default onboarding;
 
 const styles = StyleSheet.create({
   container: {
@@ -49,4 +59,7 @@ const styles = StyleSheet.create({
     fontSize: 16,
     fontWeight: "bold",
   },
+  image2 : {
+
+  }
 });
